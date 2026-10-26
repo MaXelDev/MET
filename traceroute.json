@@ -1,0 +1,291 @@
+[
+    {
+        "timestamp": "2026-10-23T17:45:20+02:00",
+        "source": "local",
+        "target": "www.impots.gouv.fr",
+        "destination_ip": "2.16.11.144",
+        "reached": true,
+        "rtt_total_ms": 8.55,
+        "hops": [
+            {
+                "hop": 1,
+                "ip": "10.56.0.1",
+                "rtt_ms": 1.342,
+                "delta_ms": 1.342
+            },
+            {
+                "hop": 2,
+                "ip": "10.100.254.4",
+                "rtt_ms": 2.831,
+                "delta_ms": 1.489
+            },
+            {
+                "hop": 3,
+                "ip": "172.16.18.242",
+                "rtt_ms": 4.449,
+                "delta_ms": 1.619
+            },
+            {
+                "hop": 4,
+                "ip": "172.16.16.121",
+                "rtt_ms": 5.038,
+                "delta_ms": 0.588
+            },
+            {
+                "hop": 5,
+                "ip": "10.11.3.26",
+                "rtt_ms": 6.063,
+                "delta_ms": 1.026
+            },
+            {
+                "hop": 6,
+                "ip": "10.11.3.17",
+                "rtt_ms": 7.099,
+                "delta_ms": 1.036
+            },
+            {
+                "hop": 7,
+                "ip": "10.100.254.3",
+                "rtt_ms": 6.102,
+                "delta_ms": -0.997
+            },
+            {
+                "hop": 8,
+                "ip": "193.55.215.134",
+                "rtt_ms": 4.604,
+                "delta_ms": -1.499
+            },
+            {
+                "hop": 9,
+                "ip": "193.55.202.188",
+                "rtt_ms": 5.332,
+                "delta_ms": 0.728
+            },
+            {
+                "hop": 10,
+                "ip": "193.55.204.196",
+                "rtt_ms": 10.367,
+                "delta_ms": 5.035
+            },
+            {
+                "hop": 11,
+                "ip": "193.51.180.166",
+                "rtt_ms": 9.496,
+                "delta_ms": -0.871
+            },
+            {
+                "hop": 12,
+                "ip": "193.55.204.193",
+                "rtt_ms": 10.759,
+                "delta_ms": 1.263
+            },
+            {
+                "hop": 13,
+                "ip": "193.51.189.109",
+                "rtt_ms": 11.529,
+                "delta_ms": 0.771
+            },
+            {
+                "hop": 14,
+                "ip": "2.16.11.144",
+                "rtt_ms": 8.55,
+                "delta_ms": -2.98
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-10-23T17:45:27+02:00",
+        "source": "globalping:Toulouse",
+        "target": "www.impots.gouv.fr",
+        "destination_ip": "23.220.72.79",
+        "reached": true,
+        "rtt_total_ms": 15.043,
+        "hops": [
+            {
+                "hop": 1,
+                "ip": "192.168.1.254",
+                "rtt_ms": 0.286,
+                "delta_ms": 0.286
+            },
+            {
+                "hop": 2,
+                "ip": "194.149.162.198",
+                "rtt_ms": 14.586,
+                "delta_ms": 14.299
+            },
+            {
+                "hop": 3,
+                "ip": null,
+                "rtt_ms": null,
+                "delta_ms": null
+            },
+            {
+                "hop": 4,
+                "ip": null,
+                "rtt_ms": null,
+                "delta_ms": null
+            },
+            {
+                "hop": 5,
+                "ip": "192.168.224.141",
+                "rtt_ms": 15.537,
+                "delta_ms": 0.952
+            },
+            {
+                "hop": 6,
+                "ip": "192.168.240.165",
+                "rtt_ms": 15.23,
+                "delta_ms": -0.307
+            },
+            {
+                "hop": 7,
+                "ip": "192.168.195.143",
+                "rtt_ms": 15.684,
+                "delta_ms": 0.454
+            },
+            {
+                "hop": 8,
+                "ip": "23.220.72.79",
+                "rtt_ms": 15.043,
+                "delta_ms": -0.641
+            }
+        ],
+        "probe": {
+            "country": "FR",
+            "city": "Toulouse",
+            "asn": 12322,
+            "network": "Free"
+        },
+        "globalping_id": "2rbZABbdvbQI8pxnT00021N1V"
+    },
+    {
+        "timestamp": "2026-10-23T17:45:32+02:00",
+        "source": "globalping:Reunion",
+        "target": "www.impots.gouv.fr",
+        "destination_ip": "23.196.227.47",
+        "reached": true,
+        "rtt_total_ms": 45.748,
+        "hops": [
+            {
+                "hop": 1,
+                "ip": "172.20.1.254",
+                "rtt_ms": 0.956,
+                "delta_ms": 0.956
+            },
+            {
+                "hop": 2,
+                "ip": "192.168.1.1",
+                "rtt_ms": 3.88,
+                "delta_ms": 2.925
+            },
+            {
+                "hop": 3,
+                "ip": "80.15.226.17",
+                "rtt_ms": 10.035,
+                "delta_ms": 6.155
+            },
+            {
+                "hop": 4,
+                "ip": "193.253.83.58",
+                "rtt_ms": 10.024,
+                "delta_ms": -0.011
+            },
+            {
+                "hop": 5,
+                "ip": null,
+                "rtt_ms": null,
+                "delta_ms": null
+            },
+            {
+                "hop": 6,
+                "ip": "81.52.200.47",
+                "rtt_ms": 44.066,
+                "delta_ms": 34.041
+            },
+            {
+                "hop": 7,
+                "ip": null,
+                "rtt_ms": null,
+                "delta_ms": null
+            },
+            {
+                "hop": 8,
+                "ip": null,
+                "rtt_ms": null,
+                "delta_ms": null
+            },
+            {
+                "hop": 9,
+                "ip": null,
+                "rtt_ms": null,
+                "delta_ms": null
+            },
+            {
+                "hop": 10,
+                "ip": "23.196.227.47",
+                "rtt_ms": 45.748,
+                "delta_ms": 1.683
+            }
+        ],
+        "probe": {
+            "country": "RE",
+            "city": "Saint-Pierre",
+            "asn": 3215,
+            "network": "Orange"
+        },
+        "globalping_id": "2DKN5pNoS0e1LqMbq00021N1V"
+    },
+    {
+        "timestamp": "2026-10-23T17:45:37+02:00",
+        "source": "globalping:Nouvelle-Caledonie",
+        "target": "www.impots.gouv.fr",
+        "destination_ip": "202.87.151.11",
+        "reached": true,
+        "rtt_total_ms": 0.52,
+        "hops": [
+            {
+                "hop": 1,
+                "ip": "103.2.186.225",
+                "rtt_ms": 0.314,
+                "delta_ms": 0.314
+            },
+            {
+                "hop": 2,
+                "ip": "100.101.2.245",
+                "rtt_ms": 0.339,
+                "delta_ms": 0.025
+            },
+            {
+                "hop": 3,
+                "ip": "202.87.128.202",
+                "rtt_ms": 0.629,
+                "delta_ms": 0.291
+            },
+            {
+                "hop": 4,
+                "ip": "202.87.128.201",
+                "rtt_ms": 1.502,
+                "delta_ms": 0.872
+            },
+            {
+                "hop": 5,
+                "ip": "202.87.139.62",
+                "rtt_ms": 1.686,
+                "delta_ms": 0.184
+            },
+            {
+                "hop": 6,
+                "ip": "202.87.151.11",
+                "rtt_ms": 0.52,
+                "delta_ms": -1.165
+            }
+        ],
+        "probe": {
+            "country": "NC",
+            "city": "Noumea",
+            "asn": 45345,
+            "network": "Nautile"
+        },
+        "globalping_id": "2KtQPrhfzA2tH5Vpj00021N1V"
+    }
+]
