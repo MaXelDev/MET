@@ -1,0 +1,3 @@
+
+# Pour ignorer les fichiers caches
+*.pyc
