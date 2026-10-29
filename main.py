@@ -2,8 +2,8 @@
 import threading
 import time
 
-import ping
-import traceroute
+import src.ping as ping
+import src.traceroute as traceroute
 
 PING_INTERVAL_S = 20
 TRACEROUTE_INTERVAL_S = 3600
