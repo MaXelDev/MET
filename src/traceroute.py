@@ -12,7 +12,7 @@ from pathlib import Path
 import requests
 
 TARGET = "www.impots.gouv.fr"
-OUTPUT_FILE = Path(__file__).resolve().parent / "traceroute.json"
+OUTPUT_FILE = Path(__file__).resolve().parent.parent / "json" / "traceroute_ligne.json"
 
 GLOBALPING_URL = "https://api.globalping.io/v1/measurements"
 GLOBALPING_TOKEN = os.environ.get("GLOBALPING_TOKEN")  # facultatif

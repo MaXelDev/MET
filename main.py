@@ -1,52 +1,24 @@
-"""Ping toutes les 20 s + traceroutes (local et Globalping) toutes les heures."""
-import threading
-import time
+"""Chaîne complète : mesures -> conversion des JSON -> figures.
 
-import src.ping as ping
-import src.traceroute as traceroute
+1. Lance les mesures (mesure.py) jusqu'à Ctrl+C
+   (écriture en JSON Lines dans json/ping_ligne.json et json/traceroute_ligne.json).
+2. Convertit ces fichiers en vrais JSON (json/ping.json et json/traceroute.json) avec convertJson.
+3. Crée les figures (Figures/ping.png et Figures/traceroute.png) avec histogram.
+"""
+import mesure
+from src import convertJson, histogram
 
-PING_INTERVAL_S = 20
-TRACEROUTE_INTERVAL_S = 3600
-
-
-def ping_loop(stop):
-    while not stop.is_set():
-        entry = ping.ping_until_success(stop)
-        if entry is None:
-            break
-        ping.save(entry)
-        print(f"[ping] {entry['ip']} {entry['rtt_ms']} ms")
-        # 20 s comptées à partir du ping réussi
-        stop.wait(PING_INTERVAL_S)
-
-
-def traceroute_loop(stop):
-    next_run = time.monotonic()
-    while not stop.is_set():
-        try:
-            traceroute.run_all(stop)
-        except Exception as exc:
-            print(f"[traceroute] erreur : {exc}")
-        next_run += TRACEROUTE_INTERVAL_S
-        stop.wait(max(0.0, next_run - time.monotonic()))
+JSON_DIR = convertJson.JSON_DIR
 
 
 def main():
-    stop = threading.Event()
-    threads = [
-        threading.Thread(target=ping_loop, args=(stop,), daemon=True),
-        threading.Thread(target=traceroute_loop, args=(stop,), daemon=True),
-    ]
-    for t in threads:
-        t.start()
-    try:
-        while any(t.is_alive() for t in threads):
-            time.sleep(0.5)
-    except KeyboardInterrupt:
-        print("Arrêt...")
-        stop.set()
-        for t in threads:
-            t.join(timeout=5)
+    print("Mesures en cours... Ctrl+C pour arrêter (conversion + figures ensuite).")
+    mesure.main()                                   # bloque jusqu'à Ctrl+C
+
+    convertJson.list_to_json(JSON_DIR / "ping_ligne.json", JSON_DIR / "ping.json")
+    convertJson.list_to_json(JSON_DIR / "traceroute_ligne.json", JSON_DIR / "traceroute.json")
+
+    histogram.figures()
 
 
 if __name__ == "__main__":

@@ -1,7 +1,13 @@
 import json
 from datetime import datetime, timedelta
+from pathlib import Path
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
+
+# Dossiers du projet (le parent de src/)
+ROOT = Path(__file__).resolve().parent.parent
+JSON_DIR = ROOT / "json"
+FIGURES_DIR = ROOT / "Figures"
 
 def moyennes(fichier, champ, pas, source=None):
     with open(fichier) as f:
@@ -46,12 +52,16 @@ def tracer(fichier, champ, pas, titre, sortie, source=None):
     plt.legend()
     plt.grid(axis="y", alpha=0.3)
     plt.tight_layout()
-    plt.savefig(sortie, dpi=200)
+    plt.savefig(FIGURES_DIR / sortie, dpi=200)
     plt.show()
 
-# Ping : tranches de 30 min
-tracer("ping.json", "rtt_ms", 30, "Ping - RTT moyen par tranche de 30 min", "ping.png")
+def figures():
+    # Ping : tranches de 30 min
+    tracer(JSON_DIR / "ping.json", "rtt_ms", 30, "Ping - RTT moyen par tranche de 30 min", "ping.png")
 
-# Traceroute : tranches de 60 min, source locale uniquement
-tracer("traceroute.json", "rtt_total_ms", 60, "Traceroute (local) - RTT total moyen par heure",
-       "traceroute.png", source="local")
+    # Traceroute : tranches de 60 min, source locale uniquement
+    tracer(JSON_DIR / "traceroute.json", "rtt_total_ms", 60, "Traceroute (local) - RTT total moyen par heure",
+           "traceroute.png", source="local")
+
+if __name__ == "__main__":
+    figures()

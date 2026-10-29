@@ -10,7 +10,7 @@ from pathlib import Path
 
 TARGET = "www.impots.gouv.fr"
 TIMEOUT_S = 2
-OUTPUT_FILE = Path(__file__).resolve().parent / "ping.json"
+OUTPUT_FILE = Path(__file__).resolve().parent.parent / "json" / "ping_ligne.json"
 
 _lock = threading.Lock()
 _RTT_RE = re.compile(r"(?:time|temps)\s*[=<]\s*([\d.,]+)\s*ms", re.IGNORECASE)
